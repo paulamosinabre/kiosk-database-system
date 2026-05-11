@@ -104,17 +104,6 @@ LIMIT 5;
 
 SELECT * FROM vw_most_bought_products 
 
--- To view the total number of orders per day
-CREATE VIEW vw_orders_per_day AS
-SELECT
-    date                        AS order_date,
-    COUNT(order_id)             AS total_orders
-FROM Orders
-GROUP BY date
-ORDER BY date DESC;
-
-SELECT * FROM vw_orders_per_day;
-
 -- To view the total sales per day
 
 CREATE VIEW vw_total_sales AS
